@@ -3,12 +3,6 @@
 <h4>ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴄʀᴇᴀᴛᴇ ᴀᴄᴄᴏᴜɴᴛ ᴀɴᴅ ꜱᴀᴠᴇ ᴘᴀꜱꜱᴡᴏʀᴅ ɪɴꜱɪᴅᴇ ᴀ ꜰɪʟᴇ 🚀</h4>
 <pre><i>ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇᴅ **ꜰᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏꜱᴇꜱ ᴏɴʟʏ**. ᴍɪꜱᴜꜱᴇ ᴏꜰ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ **ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ**. ᴜꜱᴇ ᴀᴛ ʏᴏᴜʀ ᴏᴡɴ ʀɪꜱᴋ!</i></pre>
 
-<p align="center">
-    <a href="https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe">
-        <img src="https://img.shields.io/badge/Download%20python-skyblue?style=for-the-badge&logo=python" width="220" height="38.45"/>
-    </a>
-</p>
-
 ---
 
 ## 🔹 **ꜰᴇᴀᴛᴜʀᴇꜱ**  
@@ -43,11 +37,12 @@
 ---
 
 ### 🔹 **ʜᴏᴡ ᴛᴏ ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**
-1. **ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘʏᴛʜᴏɴ ɪɴꜱᴛᴀʟʟᴇᴅ** → [ᴅᴏᴡɴʟᴏᴀᴅ ʜᴇʀᴇ](https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe). 
-2. **Install module** `bash pip install requests colorama anticaptchaofficial`
-2. **ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ**→ `git clone https://github.com/Ashuxd-X/Efsanetr.git`
-2. **ᴏᴘᴇɴ ᴛʜᴇ ꜰᴏʟᴅᴇʀ ɪɴ ᴛᴇʀᴍɪɴᴀʟ** → `ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴏɴ ꜰᴏʟᴅᴇʀ > ᴄʟɪᴄᴋ "ᴏᴘᴇɴ ᴡɪᴛʜ ᴄᴍᴅ ᴏʀ cd Efsanetr"`.  
-3. **ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**: `python main.py`
+1. **ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘʏᴛʜᴏɴ ɪɴꜱᴛᴀʟʟᴇᴅ**
+2. **ʏᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ 3.12.3 ɪꜰ ɴᴏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ**
+3. **Install module** `bash pip install requests colorama anticaptchaofficial`
+4. **ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ**→ `git clone https://github.com/Ashuxd-X/Efsanetr.git`
+4. **ᴏᴘᴇɴ ᴛʜᴇ ꜰᴏʟᴅᴇʀ ɪɴ ᴛᴇʀᴍɪɴᴀʟ** → `ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴏɴ ꜰᴏʟᴅᴇʀ > ᴄʟɪᴄᴋ "ᴏᴘᴇɴ ᴡɪᴛʜ ᴄᴍᴅ ᴏʀ cd Efsanetr"`.  
+5. **ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**: `python main.py`
 
 
 ---
