@@ -1,191 +1,163 @@
 import requests
 import time
 import random
+import json
 import sys
 from anticaptchaofficial.turnstileproxyless import turnstileProxyless
 from colorama import Fore, Style, init
+from config import *  
 
-init(autoreset=True)  # Enable colors in CLI
+init(autoreset=True)
 
 # Banner
 def print_banner():
     banner = f"""{Fore.CYAN}
-  ('-.      .-')    ('-. .-.             
-  ( OO ).-. ( OO ). ( OO )  /             
-  / . --. /(_)---\_),--. ,--. ,--. ,--.   
-  | \-.  \ /    _ | |  | |  | |  | |  |   
-.-'-'  |  |\  :` `. |   .|  | |  | | .-') 
- \| |_.'  | '..`''.)|       | |  |_|( OO )
-  |  .-.  |.-._)   \|  .-.  | |  | | `-' /
-  |  | |  |\       /|  | |  |('  '-'(_.-' 
-  `--' `--' `-----' `--' `--'  `-----'  
+
+██████╗░░█████╗░░█████╗░███╗░░░███╗
+██╔══██╗██╔══██╗██╔══██╗████╗░████║
+██████╦╝██║░░██║██║░░██║██╔████╔██║
+██╔══██╗██║░░██║██║░░██║██║╚██╔╝██║
+██████╦╝╚█████╔╝╚█████╔╝██║░╚═╝░██║
+╚═════╝░░╚════╝░░╚════╝░╚═╝░░░░░╚═╝
 {Style.RESET_ALL}
 {Fore.YELLOW}[*] Efsanetr Bypass Script - Automated Registration
+[*] Fully Automated - Just Enter OTP
 [*] Developed for educational purposes only!
-[*] Use at your own risk.
 ----------------------------------------------------{Style.RESET_ALL}
 """
     print(banner)
+    print("")  
 
-# Global variable for invite code
-invite_code = None
 
-# Function to handle exit on CTRL+C
-def exit_script():
-    print(Fore.RED + "\n[✘] Process interrupted by user. Exiting...")
-    sys.exit(1)
-
-# Call the banner at the start of the script
-print_banner()
-
-# Captcha Bypass Function
-def captcha_bypass():
-    print(Fore.YELLOW + "[*] Solving Captcha... Please wait.")
-    
+# Fetch Proxy Addresses
+def get_proxy_ip(proxy):
     try:
-        solver = turnstileProxyless()
-        solver.set_verbose(1)
-        solver.set_key("296c3d4ba479eeb2c80922baaffd65e0")
-        solver.set_website_url("https://efsanetr.com")
-        solver.set_website_key("0x4AAAAAAA8edKY9bI4XxjIA")
+        ipv4 = requests.get("https://api64.ipify.org?format=json", proxies=proxy, timeout=5).json().get("ip", "Unknown")
+        ipv6 = requests.get("https://ident.me", proxies=proxy, timeout=5).text
+        return ipv4, ipv6
+    except:
+        return " [✘] Failed to fetch", "Failed to fetch"
 
-        token = solver.solve_and_return_solution()
+# Generate Random Password
+def generate_password():
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$_!"
+    return "".join(random.choices(chars, k=12))
 
-        if token:
-            print(Fore.GREEN + "[✔] Captcha solved successfully!")
-            return token
-        else:
-            print(Fore.RED + "[✘] Captcha failed. Error:", solver.error_code)
-            return None
-    except KeyboardInterrupt:
-        exit_script()
+# Captcha Solver
+def captcha_bypass():
+    print(Fore.YELLOW + "[*] Solving Captcha... Please wait.\n")  
+    solver = turnstileProxyless()
+    solver.set_verbose(1)
+    solver.set_key(anticaptcha_api_key)  
+    solver.set_website_url("https://efsanetr.com")
+    solver.set_website_key("0x4AAAAAAA8edKY9bI4XxjIA")
 
-# OTP Request Function
-def send_code(session, country_code, mobile, captcha_token):
+    token = solver.solve_and_return_solution()
+
+    print("")  
+    if token:
+        print(Fore.GREEN + "[✔] Captcha solved successfully!\n") 
+        return token
+    else:
+        print(Fore.RED + "[✘] Captcha failed.\n")  
+        return None
+
+# Send OTP with Retry Logic
+def send_otp(session, country_code, mobile, captcha_token):
     url = "https://efsanetr.com/api/v2/send/mobileCode"
     payload = {'mobile': mobile, 'countryCode': country_code}
-    
     headers = {
-        'User-Agent': random_user_agent(),
+        'User-Agent': random.choice(user_agents),  
         'Verification': captcha_token,
-        'X-Requested-With': "XMLHttpRequest",
-        'Referer': "https://efsanetr.com/en_US/internal/register/",
+        'X-Requested-With': "XMLHttpRequest"
     }
-    
-    print(Fore.YELLOW + "[*] Sending OTP request...")
-    try:
+
+    for attempt in range(3):  
         response = session.post(url, data=payload, headers=headers).json()
         if response.get("code") == 0:
-            print(Fore.GREEN + "[✔] OTP sent successfully!")
-            return response
+            print(Fore.GREEN + "[✔] OTP sent successfully!\n")  
+            return True
         else:
-            print(Fore.RED + f"[✘] OTP failed: {response}")
-            return None
-    except KeyboardInterrupt:
-        exit_script()
+            print(Fore.RED + f"[✘] OTP failed (Attempt {attempt + 1}/3): {response}\n")  
+            time.sleep(5)  
+    return False  
 
-# Registration Function
-def register(session, mobile, captcha_token, password, country_code, valid_code):
-    global invite_code
+# Register Account
+def register(session, mobile, captcha_token, password, country_code, otp):
     url = "https://efsanetr.com/api/v2/register"
-    
     payload = {
         'mobile': mobile,
-        'inviteCode': invite_code,
+        'inviteCode': invite_code, 
         'cf-turnstile-response': captcha_token,
         'passWord': password,
         'confirmPassWord': password,
         'type': "1",
         'countryCode': country_code,
-        'validCode': valid_code
+        'validCode': otp
     }
-    
     headers = {
-        'User-Agent': random_user_agent(),
+        'User-Agent': random.choice(user_agents), 
         'Verification': captcha_token,
-        'X-Requested-With': "XMLHttpRequest",
-        'Referer': "https://efsanetr.com/en_US/internal/register/",
+        'X-Requested-With': "XMLHttpRequest"
     }
-    
-    print(Fore.YELLOW + "[*] Submitting registration...")
+
+    response = session.post(url, data=payload, headers=headers).json()
+    if response.get("code") == 0:
+        print(Fore.GREEN + "[✔] Registration successful!\n") 
+        return True
+    else:
+        print(Fore.RED + f"[✘] Registration failed: {response}\n") 
+        return False
+
+# Save Accounts to JSON
+def save_account(mobile, password):
+    account_data = {"mobile": mobile, "password": password}
     try:
-        response = session.post(url, data=payload, headers=headers).json()
-        print(Fore.CYAN + f"[ℹ] API Response: {response}")
-        if response.get("code") == 0:
-            print(Fore.GREEN + "[✔] Registration successful!")
-        else:
-            print(Fore.RED + f"[✘] Registration failed: {response.get('message', 'Unknown Error')}")
-    except KeyboardInterrupt:
-        exit_script()
+        with open("accounts.json", "r") as file:
+            accounts = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        accounts = []
 
-# Function for Random User-Agent
-def random_user_agent():
-    user_agents = [
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-        "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36",
-    ]
-    return random.choice(user_agents)
+    accounts.append(account_data)
 
-# Function to Fetch Proxies from File
-def get_proxies_from_file(file_path="proxies.txt"):
-    try:
-        with open(file_path, "r") as file:
-            proxies = file.readlines()
-        proxies = [proxy.strip() for proxy in proxies if proxy.strip()]
-        return proxies
-    except FileNotFoundError:
-        print(Fore.RED + "[✘] Proxies file not found.")
-        exit_script()
+    with open("accounts.json", "w") as file:
+        json.dump(accounts, file, indent=4)
 
-# Function to Handle Proxy Input
-def get_proxy(proxies):
-    if proxies:
-        return {"http": random.choice(proxies), "https": random.choice(proxies)}
-    return None
+# Main Execution
+def main():
+    print_banner()  
 
-# Function to Ask for Invite Code Once
-def get_invite_code():
-    global invite_code
-    if invite_code is None:
-        invite_code = input(Fore.YELLOW + "> Enter Invite Code: ").strip()
+    if len(proxies) < len(numbers): 
+        print(Fore.RED + "[✘] Not enough proxies for numbers. Exiting...\n")  
+        sys.exit(1)
 
-# Main Execution Loop
-try:
-    print(Fore.CYAN + "\n=== Welcome to the Efsane Bypass Script ===\n")
-    
-    get_invite_code()
-    
-    proxies = get_proxies_from_file()  # Fetch proxies from proxies.txt
-    if not proxies:
-        print(Fore.RED + "[✘] No proxies found. Exiting...")
-        exit_script()
-
-    while True:
+    for i in range(min(len(numbers), max_accounts)):  
         session = requests.Session()
-        proxy = get_proxy(proxies)
-        if proxy:
-            session.proxies.update(proxy)
-            print(Fore.GREEN + f"[*] Using proxy: {proxy}")
+        proxy = {"http": f"http://{proxies[i]}", "https": f"http://{proxies[i]}"}
+        session.proxies.update(proxy)
 
-        country_code = input(Fore.YELLOW + "> Enter Country Code (without +): ").strip()
-        mobile = input(Fore.YELLOW + "> Enter Mobile Number (without country code): ").strip()
-        password = "Abcdef123@_#"  # You can modify this to be user-defined
-        
-        # Captcha Bypass
+        ipv4, ipv6 = get_proxy_ip(proxy)
+        print(Fore.CYAN + f"[*] Using Proxy: {proxies[i]}")
+        print(Fore.BLUE + f"[*] Proxy IPv4 Address: {ipv4}")
+        print(Fore.BLUE + f"[*] Proxy IPv6 Address: {ipv6}\n")  
+
+        country_code, mobile = numbers[i].split(",") 
+
+        password = generate_password()
         captcha_token = captcha_bypass()
         if not captcha_token:
-            continue  # Retry if captcha fails
+            continue
 
-        # Send OTP
-        otp_response = send_code(session, country_code, mobile, captcha_token)
-        if not otp_response:
-            continue  # Retry if OTP fails
+        if not send_otp(session, country_code, mobile, captcha_token):
+            continue
 
-        otp = input(Fore.YELLOW + "> Enter OTP received on your mobile: ").strip()
-        
-        # Register User
-        register(session, mobile, captcha_token, password, country_code, otp)
+        otp = input(Fore.YELLOW + f"[✔] Enter OTP for +{country_code} {mobile}: ").strip()  
+        if register(session, mobile, captcha_token, password, country_code, otp):
+            save_account(mobile, password)
 
-except KeyboardInterrupt:
-    exit_script()
+        print(Fore.CYAN + "[*] Moving to the next account...\n")  
+        time.sleep(delay_between_accounts)  
+
+if __name__ == "__main__":
+    main()
+

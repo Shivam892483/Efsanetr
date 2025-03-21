@@ -1,98 +1,81 @@
-# Efsane Bypass Script  
+## ᴇꜰꜱᴀɴᴇ ʙʏᴘᴀꜱꜱ ꜱᴄʀɪᴘᴛ 🚀
 
-This script automates the registration process on **EfsaneTR** by solving captchas, sending OTP requests, and submitting registration forms.  
+<h4>ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴄʀᴇᴀᴛᴇ ᴀᴄᴄᴏᴜɴᴛ ᴀɴᴅ ꜱᴀᴠᴇ ᴘᴀꜱꜱᴡᴏʀᴅ ɪɴꜱɪᴅᴇ ᴀ ꜰɪʟᴇ 🚀</h4>
+<pre><i>ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇᴅ **ꜰᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏꜱᴇꜱ ᴏɴʟʏ**. ᴍɪꜱᴜꜱᴇ ᴏꜰ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ **ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ**. ᴜꜱᴇ ᴀᴛ ʏᴏᴜʀ ᴏᴡɴ ʀɪꜱᴋ!</i></pre>
 
-## ⚠ Disclaimer  
-This script is developed **for educational purposes only**. Misuse of this script is **strictly prohibited**. Use at your own risk!  
-
----
-
-## ✨ Features  
-✔ **Captcha Bypass** (Cloudflare Turnstile)  
-✔ **Automated OTP Request**  
-✔ **Proxy Support** (Uses random proxies from `proxies.txt`)  
-✔ **User-Agent Randomization**  
-✔ **Automated Registration**  
+<p align="center">
+    <a href="https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe">
+        <img src="https://img.shields.io/badge/Download%20python-skyblue?style=for-the-badge&logo=python" width="220" height="38.45"/>
+    </a>
+</p>
 
 ---
 
-## 📜 Requirements  
-
-Make sure you have **Python 3.7+** installed on your system.  
-
-### 🔧 Install Dependencies  
-
-Run the following command to install required Python modules:  
-
-```bash
-pip install requests colorama anticaptchaofficial
-```
+## 🔹 **ꜰᴇᴀᴛᴜʀᴇꜱ**  
+✅ **ᴀᴜᴛᴏᴍᴀᴛᴇꜱ ᴇꜰꜱᴀɴᴇ ʀᴇɢɪꜱᴛʀᴀᴛɪᴏɴ**  
+✅ **ʙʏᴘᴀꜱꜱᴇꜱ ᴄᴀᴘᴛᴄʜᴀ** ᴜꜱɪɴɢ ᴀɴᴛɪᴄᴀᴘᴛᴄʜᴀ  
+✅ **ᴜꜱᴇꜱ ᴍᴜʟᴛɪᴘʟᴇ ᴘʀᴏxɪᴇꜱ** ᴛᴏ ᴇɴꜱᴜʀᴇ ɴᴏ ɪᴘ ᴛʀᴀᴄᴋɪɴɢ  
+✅ **ᴄᴏɴᴛʀᴏʟ ɴᴜᴍʙᴇʀ ᴏꜰ ᴀᴄᴄᴏᴜɴᴛꜱ ᴛᴏ ʀᴇɢɪꜱᴛᴇʀ**  
+✅ **ꜱᴀᴠᴇꜱ ᴀʟʟ ʀᴇɢɪꜱᴛᴇʀᴇᴅ ᴅᴀᴛᴀ ɪɴꜱɪᴅᴇ `accounts.json`**  
 
 ---
 
-## 🚀 How to Use  
+<summary><h3>
+- <b> ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs ᴀɴᴅ ꜰᴇᴀᴛᴜʀᴇꜱ </b>
+</h3></summary>
 
-1. **Clone the Repository**  
+- **Change Variables** [Necessary Variables](https://github.com/Ashuxd-X/Efsanetr/blob/main/config.py)
 
-```bash
-git clone https://github.com/Ashuxd-X/Efsanetr.git
-cd Efsanetr
-```
+# ᴡʜᴀᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ɪɴ `Config.py`
 
-2. **Prepare Proxies**  
-
-- Create a `proxies.txt` file in the same directory as the script.  
-- Add HTTP/HTTPS proxies in the format:  
-  ```
-  http://user:pass@proxy_ip:port
-  https://proxy_ip:port
-  ```
-  
-3. **Run the Script**  
-
-```bash
-python main.py
-```
-
-4. **Follow On-Screen Instructions**  
-
-- Enter your **invite code** (only once).  
-- Provide **Country Code** and **Mobile Number**.  
-- The script will solve the captcha and send an OTP request.  
-- Enter the **OTP received** on your mobile.  
-- The script will attempt to complete the registration.  
+- **`proxies`** → ᴀᴅᴅ ʏᴏᴜʀ **ʀᴇꜱɪᴅᴇɴᴛɪᴀʟ ᴘʀᴏxɪᴇꜱ**, ᴍᴀᴋᴇ **ᴍᴀɴʏ ᴄᴏᴘɪᴇꜱ** ɪꜰ ɴᴇᴇᴅᴇᴅ.  
+- **`numbers`** → ᴇɴᴛᴇʀ **ᴀʟʟ ɴᴜᴍʙᴇʀꜱ** ᴀᴛ ᴏɴᴄᴇ **ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴛʜᴇᴍ**, ᴏᴛʜᴇʀᴡɪꜱᴇ, ᴀᴅᴅ ᴏɴᴇ ʙʏ ᴏɴᴇ.  
+- **`max_accounts`** → ꜱᴇᴛ ᴛʜᴇ **ɴᴜᴍʙᴇʀ ᴏꜰ ᴀᴄᴄᴏᴜɴᴛꜱ** ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ.  
+- **`invite_code`** → ᴀᴅᴅ **ʏᴏᴜʀ ɪɴᴠɪᴛᴇ ᴄᴏᴅᴇ**.  
+- **`anticaptcha_api_key`** → ɪꜰ **ᴍʏ ᴀᴘɪ ꜰᴜɴᴅ ᴇɴᴅꜱ**, ᴛʜᴇɴ **ᴜꜱᴇ ʏᴏᴜʀ ᴏᴡɴ ᴋᴇʏ**.  
 
 ---
 
-## 🛠 Troubleshooting  
-
-1. **Proxies Not Found?**  
-   - Make sure `proxies.txt` exists and contains working proxies.  
-   
-2. **Captcha Not Solving?**  
-   - Ensure your **AntiCaptcha API key** is valid.  
-   - If needed, update the API key in the `captcha_bypass()` function.  
-
-3. **Registration Fails?**  
-   - Ensure the phone number format is correct.  
-   - Verify that the invite code is still active.  
+### ⚠ **ɪᴍᴘᴏʀᴛᴀɴᴛ:**  
+🔹 **Aꜰᴛᴇʀ ɴᴜᴍʙᴇʀ'ꜱ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ, ᴘᴜᴛ ᴀ `,` (ᴄᴏᴍᴍᴀ)**.  
+🔹 **For multiple proxies & numbers, ᴋᴇᴇᴘ ᴀᴅᴅɪɴɢ `,` (ᴄᴏᴍᴍᴀ) ᴀꜰᴛᴇʀ ᴇᴀᴄʜ ʟɪɴᴇ**.  
 
 ---
 
-## 👨‍💻 Developer Notes  
+### 🔹 **ʜᴏᴡ ᴛᴏ ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**
+1. **ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘʏᴛʜᴏɴ ɪɴꜱᴛᴀʟʟᴇᴅ** → [ᴅᴏᴡɴʟᴏᴀᴅ ʜᴇʀᴇ](https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe). 
+2. **Install module** `bash pip install requests colorama anticaptchaofficial`
+2. **ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ**→ `git clone https://github.com/Ashuxd-X/Efsanetr.git`
+2. **ᴏᴘᴇɴ ᴛʜᴇ ꜰᴏʟᴅᴇʀ ɪɴ ᴛᴇʀᴍɪɴᴀʟ** → `ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴏɴ ꜰᴏʟᴅᴇʀ > ᴄʟɪᴄᴋ "ᴏᴘᴇɴ ᴡɪᴛʜ ᴄᴍᴅ ᴏʀ cd Efsanetr"`.  
+3. **ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**: `python main.py`
 
-- The script uses **random user-agents** to mimic real users.  
-- The password used is hardcoded as `"Abcdef123@_#"` (you can change it).  
-- The script **exits gracefully** on `CTRL+C`.  
-
----
-
-### 🏴‍☠️ Warning  
-
-Using this script to spam, exploit, or bypass security systems **may violate legal policies**. The author is **not responsible** for any misuse.  
 
 ---
+# 🛠 ᴛʀᴏᴜʙʟᴇꜱʜᴏᴏᴛɪɴɢ
 
-### 📜 License  
+- **ᴄᴀᴘᴛᴄʜᴀ ɴᴏᴛ ꜱᴏʟᴠɪɴɢ?** → ᴇɴꜱᴜʀᴇ ʏᴏᴜʀ ᴀɴᴛɪᴄᴀᴘᴛᴄʜᴀ API ᴋᴇʏ ɪꜱ ᴠᴀʟɪᴅ  
+- **ʀᴇɢɪꜱᴛʀᴀᴛɪᴏɴ ꜰᴀɪʟɪɴɢ?** → ᴄʜᴇᴄᴋ ɪꜰ ʏᴏᴜʀ ɴᴜᴍʙᴇʀ ꜰᴏʀᴍᴀᴛ ɪꜱ ᴄᴏʀʀᴇᴄᴛ  
+ ᴠᴇʀɪꜰʏ ɪꜰ ʏᴏᴜʀ ɪɴᴠɪᴛᴇ ᴄᴏᴅᴇ ɪꜱ ꜱᴛɪʟʟ ᴠᴀʟɪᴅ  
 
-**MIT License** - Feel free to modify and distribute!
+━━━━━━━━━━━━━━━━━━━━
+
+
+### ✍️ ᴄʀᴇᴅɪᴛs 
+
+ [ꜱʜɪᴠᴀᴍ](https://github.com/Shivam892483)
+
+ [ᴀɴꜱʜ](https://github.com/Ashuxd-X)
+
+ <b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/Ashuxd-X/Efsanetr/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ  ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ ❤️ </b>
+
+
+### 🏴‍☠️ ᴡᴀʀɴɪɴɢ 
+
+ᴜꜱɪɴɢ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ᴛᴏ ꜱᴘᴀᴍ, ᴇxᴘʟᴏɪᴛ, ᴏʀ ʙʏᴘᴀꜱꜱ ꜱᴇᴄᴜʀɪᴛʏ ꜱʏꜱᴛᴇᴍꜱ **ᴍᴀʏ ᴠɪᴏʟᴀᴛᴇ ʟᴇɢᴀʟ ᴘᴏʟɪᴄɪᴇꜱ**. ᴛʜᴇ ᴀᴜᴛʜᴏʀ ɪꜱ **ɴᴏᴛ ʀᴇꜱᴘᴏɴꜱɪʙʟᴇ** ꜰᴏʀ ᴀɴʏ ᴍɪꜱᴜꜱᴇ.  
+
+### 📜 ʟɪᴄᴇɴꜱᴇ
+
+**ᴍɪᴛ ʟɪᴄᴇɴꜱᴇ** - ꜰᴇᴇʟ ꜰʀᴇᴇ ᴛᴏ ᴍᴏᴅɪꜰʏ ᴀɴᴅ ᴅɪꜱᴛʀɪʙᴜᴛᴇ!
+
+
+━━━━━━━━━━━━━━━━━━━
