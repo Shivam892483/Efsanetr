@@ -1,76 +1,75 @@
-## ᴇꜰꜱᴀɴᴇ ʙʏᴘᴀꜱꜱ ꜱᴄʀɪᴘᴛ 🚀
+## Efsane Bypass script 🚀
 
 <h4>ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴄʀᴇᴀᴛᴇ ᴀᴄᴄᴏᴜɴᴛ ᴀɴᴅ ꜱᴀᴠᴇ ᴘᴀꜱꜱᴡᴏʀᴅ ɪɴꜱɪᴅᴇ ᴀ ꜰɪʟᴇ 🚀</h4>
-<pre><i>ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇᴅ **ꜰᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏꜱᴇꜱ ᴏɴʟʏ**. ᴍɪꜱᴜꜱᴇ ᴏꜰ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ **ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ**. ᴜꜱᴇ ᴀᴛ ʏᴏᴜʀ ᴏᴡɴ ʀɪꜱᴋ!</i></pre>
+<pre>ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ ᴅᴇᴠᴇʟᴏᴘᴇᴅ **ꜰᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏꜱᴇꜱ ᴏɴʟʏ**. ᴍɪꜱᴜꜱᴇ ᴏꜰ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ɪꜱ **ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ**. ᴜꜱᴇ ᴀᴛ ʏᴏᴜʀ ᴏᴡɴ ʀɪꜱᴋ!</pre>
 
 ---
 
-## 🔹 **ꜰᴇᴀᴛᴜʀᴇꜱ**  
-✅ **ᴀᴜᴛᴏᴍᴀᴛᴇꜱ ᴇꜰꜱᴀɴᴇ ʀᴇɢɪꜱᴛʀᴀᴛɪᴏɴ**  
-✅ **ʙʏᴘᴀꜱꜱᴇꜱ ᴄᴀᴘᴛᴄʜᴀ** ᴜꜱɪɴɢ ᴀɴᴛɪᴄᴀᴘᴛᴄʜᴀ  
-✅ **ᴜꜱᴇꜱ ᴍᴜʟᴛɪᴘʟᴇ ᴘʀᴏxɪᴇꜱ** ᴛᴏ ᴇɴꜱᴜʀᴇ ɴᴏ ɪᴘ ᴛʀᴀᴄᴋɪɴɢ  
-✅ **ᴄᴏɴᴛʀᴏʟ ɴᴜᴍʙᴇʀ ᴏꜰ ᴀᴄᴄᴏᴜɴᴛꜱ ᴛᴏ ʀᴇɢɪꜱᴛᴇʀ**  
-✅ **ꜱᴀᴠᴇꜱ ᴀʟʟ ʀᴇɢɪꜱᴛᴇʀᴇᴅ ᴅᴀᴛᴀ ɪɴꜱɪᴅᴇ `accounts.json`**  
+## Features
+
+- **Automates Efsane registration**
+- **Bypasses captcha** using AntiCaptcha
+- **Uses multiple proxies** to ensure no IP tracking
+- **Control number of accounts to register**
+- **Saves all registered data inside `accounts.json`**
 
 ---
 
-<summary><h3>
-- <b> ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs ᴀɴᴅ ꜰᴇᴀᴛᴜʀᴇꜱ </b>
-</h3></summary>
+## ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs ᴀɴᴅ ꜰᴇᴀᴛᴜʀᴇꜱ 
 
 - **Change Variables** [Necessary Variables](https://github.com/Ashuxd-X/Efsanetr/blob/main/config.py)
 
-# ᴡʜᴀᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ɪɴ `Config.py`
+### ᴡʜᴀᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ɪɴ `Config.py`
 
-- **`proxies`** → ᴀᴅᴅ ʏᴏᴜʀ **ʀᴇꜱɪᴅᴇɴᴛɪᴀʟ ᴘʀᴏxɪᴇꜱ**, ᴍᴀᴋᴇ **ᴍᴀɴʏ ᴄᴏᴘɪᴇꜱ** ɪꜰ ɴᴇᴇᴅᴇᴅ.  
-- **`numbers`** → ᴇɴᴛᴇʀ **ᴀʟʟ ɴᴜᴍʙᴇʀꜱ** ᴀᴛ ᴏɴᴄᴇ **ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴛʜᴇᴍ**, ᴏᴛʜᴇʀᴡɪꜱᴇ, ᴀᴅᴅ ᴏɴᴇ ʙʏ ᴏɴᴇ.  
-- **`max_accounts`** → ꜱᴇᴛ ᴛʜᴇ **ɴᴜᴍʙᴇʀ ᴏꜰ ᴀᴄᴄᴏᴜɴᴛꜱ** ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ.  
-- **`invite_code`** → ᴀᴅᴅ **ʏᴏᴜʀ ɪɴᴠɪᴛᴇ ᴄᴏᴅᴇ**.  
-- **`anticaptcha_api_key`** → ɪꜰ **ᴍʏ ᴀᴘɪ ꜰᴜɴᴅ ᴇɴᴅꜱ**, ᴛʜᴇɴ **ᴜꜱᴇ ʏᴏᴜʀ ᴏᴡɴ ᴋᴇʏ**.  
-
----
-
-### ⚠ **ɪᴍᴘᴏʀᴛᴀɴᴛ:**  
-🔹 **Aꜰᴛᴇʀ ɴᴜᴍʙᴇʀ'ꜱ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ, ᴘᴜᴛ ᴀ `,` (ᴄᴏᴍᴍᴀ)**.  
-🔹 **For multiple proxies & numbers, ᴋᴇᴇᴘ ᴀᴅᴅɪɴɢ `,` (ᴄᴏᴍᴍᴀ) ᴀꜰᴛᴇʀ ᴇᴀᴄʜ ʟɪɴᴇ**.  
+- **`proxies`** → Add your **residential proxies**, make **many copies** if needed.
+- **`numbers`** → Enter **all numbers** at once **if you have them**, otherwise, add one by one.
+- **`max_accounts`** → Set the **number of accounts** you want to create.
+- **`invite_code`** → Add **your invite code**.
+- **`anticaptcha_api_key`** → If **my API fund ends**, then **use your own key**.
 
 ---
 
-### 🔹 **ʜᴏᴡ ᴛᴏ ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**
-1. **ᴍᴀᴋᴇ ꜱᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘʏᴛʜᴏɴ ɪɴꜱᴛᴀʟʟᴇᴅ**
-2. **ʏᴏᴜ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ 3.12.3 ɪꜰ ɴᴏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ**
-3. **Install module** `bash pip install requests colorama anticaptchaofficial`
-4. **ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏꜱɪᴛᴏʀʏ ᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ**→ `git clone https://github.com/Ashuxd-X/Efsanetr.git`
-4. **ᴏᴘᴇɴ ᴛʜᴇ ꜰᴏʟᴅᴇʀ ɪɴ ᴛᴇʀᴍɪɴᴀʟ** → `ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴏɴ ꜰᴏʟᴅᴇʀ > ᴄʟɪᴄᴋ "ᴏᴘᴇɴ ᴡɪᴛʜ ᴄᴍᴅ ᴏʀ cd Efsanetr"`.  
-5. **ʀᴜɴ ᴛʜᴇ ꜱᴄʀɪᴘᴛ**: `python main.py`
+### Important:
 
+- **After the number's country code, put a `,` (comma)**.
+- **For multiple proxies & numbers, keep adding `,` (comma) after each line**.
 
 ---
-# 🛠 ᴛʀᴏᴜʙʟᴇꜱʜᴏᴏᴛɪɴɢ
 
-- **ᴄᴀᴘᴛᴄʜᴀ ɴᴏᴛ ꜱᴏʟᴠɪɴɢ?** → ᴇɴꜱᴜʀᴇ ʏᴏᴜʀ ᴀɴᴛɪᴄᴀᴘᴛᴄʜᴀ API ᴋᴇʏ ɪꜱ ᴠᴀʟɪᴅ  
-- **ʀᴇɢɪꜱᴛʀᴀᴛɪᴏɴ ꜰᴀɪʟɪɴɢ?** → ᴄʜᴇᴄᴋ ɪꜰ ʏᴏᴜʀ ɴᴜᴍʙᴇʀ ꜰᴏʀᴍᴀᴛ ɪꜱ ᴄᴏʀʀᴇᴄᴛ  
- ᴠᴇʀɪꜰʏ ɪꜰ ʏᴏᴜʀ ɪɴᴠɪᴛᴇ ᴄᴏᴅᴇ ɪꜱ ꜱᴛɪʟʟ ᴠᴀʟɪᴅ  
+## How to Run the Script
 
-━━━━━━━━━━━━━━━━━━━━
+1. **Make sure you have Python installed**
+2. **You can download Python 3.12.3 if not already installed**
+3. **Install required modules**: `pip install requests colorama anticaptchaofficial`
+4. **Clone the repository or download**: `git clone https://github.com/Ashuxd-X/Efsanetr.git`
+5. **Open the folder in terminal**: Right-click on the folder > Click "Open with CMD" or `cd Efsanetr`.
+6. **Run the script**: `python main.py`
 
+---
 
-### ✍️ ᴄʀᴇᴅɪᴛs 
+## 🛠 ᴛʀᴏᴜʙʟᴇꜱʜᴏᴏᴛɪɴɢ
 
- [ꜱʜɪᴠᴀᴍ](https://github.com/Shivam892483)
+- **Captcha not solving?** → Ensure your AntiCaptcha API key is valid.
+- **Registration failing?** → Check if your number format , invite code is correct.
+
+---
+
+## ᴄʀᴇᴅɪᴛs 
+
+ [ꜱʜɪᴠᴀᴍ](https://github.com/Shivam892483) 🛠  ᴀᴄᴄᴏᴜɴᴛ ꜰʟᴀɢɢᴇᴅ
 
  [ᴀɴꜱʜ](https://github.com/Ashuxd-X)
 
  <b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/Ashuxd-X/Efsanetr/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ  ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ ❤️ </b>
 
+---
 
-### 🏴‍☠️ ᴡᴀʀɴɪɴɢ 
+## ᴡᴀʀɴɪɴɢ 
 
-ᴜꜱɪɴɢ ᴛʜɪꜱ ꜱᴄʀɪᴘᴛ ᴛᴏ ꜱᴘᴀᴍ, ᴇxᴘʟᴏɪᴛ, ᴏʀ ʙʏᴘᴀꜱꜱ ꜱᴇᴄᴜʀɪᴛʏ ꜱʏꜱᴛᴇᴍꜱ **ᴍᴀʏ ᴠɪᴏʟᴀᴛᴇ ʟᴇɢᴀʟ ᴘᴏʟɪᴄɪᴇꜱ**. ᴛʜᴇ ᴀᴜᴛʜᴏʀ ɪꜱ **ɴᴏᴛ ʀᴇꜱᴘᴏɴꜱɪʙʟᴇ** ꜰᴏʀ ᴀɴʏ ᴍɪꜱᴜꜱᴇ.  
+Using this script to spam, exploit, or bypass security systems **may violate legal policies**. The author is **not responsible** for any misuse.
 
-### 📜 ʟɪᴄᴇɴꜱᴇ
+---
 
-**ᴍɪᴛ ʟɪᴄᴇɴꜱᴇ** - ꜰᴇᴇʟ ꜰʀᴇᴇ ᴛᴏ ᴍᴏᴅɪꜰʏ ᴀɴᴅ ᴅɪꜱᴛʀɪʙᴜᴛᴇ!
+## ʟɪᴄᴇɴꜱᴇ
 
-
-━━━━━━━━━━━━━━━━━━━
+**MIT License** - Feel free to modify and distribute!
