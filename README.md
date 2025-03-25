@@ -41,7 +41,7 @@
 1. **Make sure you have Python installed**
 2. **You can download Python 3.12.3 if not already installed**
 3. **Install required modules**: `pip install requests colorama anticaptchaofficial`
-4. **Clone the repository or download**: `git clone https://github.com/Ashuxd-X/Efsanetr.git`
+4. **Clone the repository**: `git clone https://github.com/Shivam892483/Efsanetr.git`
 5. **Open the folder in terminal**: Right-click on the folder > Click "Open with CMD" or `cd Efsanetr`.
 6. **Run the script**: `python main.py`
 
@@ -56,7 +56,7 @@
 
 ## ᴄʀᴇᴅɪᴛs 
 
- [ꜱʜɪᴠᴀᴍ](https://github.com/Shivam892483) 🛠  ᴀᴄᴄᴏᴜɴᴛ ꜰʟᴀɢɢᴇᴅ
+ [ꜱʜɪᴠᴀᴍ](https://github.com/Shivam892483) **🛠  ᴀᴄᴄᴏᴜɴᴛ ꜰʟᴀɢɢᴇᴅ**
 
  [ᴀɴꜱʜ](https://github.com/Ashuxd-X)
 
